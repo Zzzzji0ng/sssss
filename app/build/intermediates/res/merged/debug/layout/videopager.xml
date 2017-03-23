@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <!--待添加 搜索功能-->
+
+    <LinearLayout
+        android:id="@+id/Button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_morevideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="更多视频 →"/>
+
+        <Button
+            android:id="@+id/Button_Refresh_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="换一换 →"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/viedo_gridview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <GridView
+            android:id="@+id/video_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"
+            android:listSelector="#00000000">
+        </GridView>
+
+
+    </LinearLayout>  <!--双排列表部分-->
+
+    <LinearLayout
+        android:id="@+id/viedo_listview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/video_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000">
+        </ListView>
+
+    </LinearLayout>   <!--更多列表部分-->
+
+
+
+
+</LinearLayout>

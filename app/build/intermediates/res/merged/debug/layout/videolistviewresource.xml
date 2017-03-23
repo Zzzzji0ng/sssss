@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <ImageView android:id="@+id/list_videoImage"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/backblack"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/headImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/list_videoAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="author"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/list_videoTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="title"
+                android:textColor="@android:color/darker_gray"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/list_videoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:text="标题"
+            android:padding="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"/>
+    </LinearLayout>
+
+
+</LinearLayout>

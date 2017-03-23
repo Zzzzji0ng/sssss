@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/leftmenuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/left_back"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/left_weather_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/left_weather_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sunny"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/left_weather_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="城市"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"/>
+
+            <TextView
+                android:id="@+id/left_weather_wendu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="wendu"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:paddingBottom="10dp"
+        android:id="@+id/left_finish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"
+        android:text="退出"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">早读新闻</string>
+    <string name="button_start_text">进入新闻</string>
+    <string name="button_refresh_pic">刷新图片</string>
+    <string name="button_change_type">选择分类</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

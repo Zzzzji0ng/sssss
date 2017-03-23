@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="360">
+    <!--最外层套一个旋转动画  从0 度 到360 度-->
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+           android:innerRadiusRatio="2.5"
+           android:shape="ring"
+           android:thicknessRatio="15"
+           android:useLevel="false">
+        <!--1. 内部环的比例 值越大 圆月小  2. progress 的样式 为环状  3.圆环厚度的比例 值越大 幻月小  4.当为true的时候回忽隐忽现-->
+        <gradient
+            android:centerColor="#55ff0000"
+            android:endColor="#ffffff"
+            android:startColor="#ff0000"
+            android:type="sweep"/>
+        <!--颜色的渐变  type 的过渡效果 渐变-->
+
+    </shape>
+</rotate>

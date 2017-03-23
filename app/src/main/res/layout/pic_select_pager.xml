@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gridview_backgd"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择图片类型"
+        android:textSize="30sp"/>
+
+    <GridView
+        android:gravity="center"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:id="@+id/gridView"
+        android:columnWidth="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp">
+        <!--水平间距 高度间距 列数-->
+
+    </GridView>
+
+</LinearLayout>

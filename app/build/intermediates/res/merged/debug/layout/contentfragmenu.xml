@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/contentmenuFragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white">
+    <!--/*消耗滑动事件  这里也改成NoScrollViewPager*/-->
+    <include layout="@layout/titlebar"/>
+    <com.example.jiong.mynews.view.NoScrollViewPager
+        android:id="@+id/ContentViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </com.example.jiong.mynews.view.NoScrollViewPager>
+
+    <!--内部文字图片垂直对齐   想要ridiobutton 与viewpager 关联 必须将父窗口实例化-->
+    <RadioGroup
+        android:id="@+id/RG_mian"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_tab_bg">
+        <!--第一行是将button设为透明  第二个是两个之间的间距   继承到了value 中的style-->
+        <RadioButton
+            android:text="新闻"
+            android:id="@+id/Button_Shouye"
+            android:drawableTop="@drawable/home_drawselector"
+            style="@style/button_tag_style"
+            />
+        <RadioButton
+            android:text="图组"
+            android:id="@+id/Button_secondPage"
+            android:drawableTop="@drawable/homesecond_drawselector"
+            style="@style/button_tag_style"
+            />
+        <RadioButton
+            android:text="视频"
+            android:id="@+id/Button_thridPage"
+            android:drawableTop="@drawable/homethrid_drawselector"
+            style="@style/button_tag_style"
+            />
+        <RadioButton
+            android:text="设置"
+            android:id="@+id/Button_Setting"
+            android:drawableTop="@drawable/setting_drawselector"
+            style="@style/button_tag_style"
+            />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/ContentLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"/>
+    <!--由于这不是在碎片之上的 所以 当碎片更换时  这一行文字不会被替换掉-->
+
+</FrameLayout>

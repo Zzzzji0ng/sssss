@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SlidingMenu-library/SlidingMenu-library.iml" filepath="$PROJECT_DIR$/SlidingMenu-library/SlidingMenu-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator_library/ViewPagerIndicator_library.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator_library/ViewPagerIndicator_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator_sample/ViewPagerIndicator_sample.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator_sample/ViewPagerIndicator_sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssss.iml" filepath="$PROJECT_DIR$/ssss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universalvideoview/universalvideoview.iml" filepath="$PROJECT_DIR$/universalvideoview/universalvideoview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universalvideoviewsample/universalvideoviewsample.iml" filepath="$PROJECT_DIR$/universalvideoviewsample/universalvideoviewsample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xutils_library/xutils_library.iml" filepath="$PROJECT_DIR$/xutils_library/xutils_library.iml" />
+    </modules>
+  </component>
+</project>

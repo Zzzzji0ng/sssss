@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\gson-2.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="42a24d508f5e05bd22cc42bd2e2babd7b5466ec9">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\gson-2.2.1_518016c6835ebf36879897f0324d88a67f25c2b3.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-SinaWeibo-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1e20c658b4eb58dc98b39b22ffb67aa868ef4390">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-SinaWeibo-2.8.1_975af9b58d17134904dcdafd65fb51cc666a72f7.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5b49b6499a0f0bb79a3f6c92acb137dc4a6a2a7b">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\instant-run_6c002c2584d0baae764626e2e0953ffdf2ce05a7.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-ShortMessage-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="796f76627d41b796ef0bc155816939dd1393fc93">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-ShortMessage-2.8.1_0b79c86190e13b27b5d60496107c5401e0dc488b.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-QZone-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b69e1369e219bb403313b0552e43fb1661e210ad">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-QZone-2.8.1_65ea797fd98f1f6957e6469ae5c228cceccb3b78.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_7317d26338776f1a7991ea2d6e462bf66c426974.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-Core-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6b28f6444c88008f7b83cea48a5fbee388717dc6">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-Core-2.8.1_19ec49f7741a37ff1e8abcd2d184e4e381992434.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_ba77a2d365afe7bf4d3fee2e0aa2be4ab4bcda20.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.bm.photoview\library\1.4.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="772452261af8eb9c1df9ae71fb621afe393277da">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.bm.photoview-library-1.4.1_6c7826700cf5202e0004636667c2784a0f13a2be.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\MobCommons-2017.0216.1054.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4ba1c804706f49009600ff1dd32a46f3af7acc9c">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\MobCommons-2017.0216.1054_6a91643a992fedbedb1ab04459060df8ffb6c957.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-Wechat-Core-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="84bcb90bdb43050335311854dd01d9b1155cde26">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Core-2.8.1_d51e7145c930c632e68b363cbd88384b17c8c08e.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\glide-3.7.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\glide-3.7.0_e63c5a965b2dc57fdccb658b9cf4acdd6d3bb0e1.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-Wechat-Moments-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ebed17f12cb04231b5a8a308435810e3d782ba5e">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-Moments-2.8.1_973cacfece85c124c70c230d5ac3c4c6449a8743.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_e69dba20cc8510b8913c085b5ffa3bcfdaae2057.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_2ca6c9b9585b635fa5633ea60fbe9c384b0f864b.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-TencentWeibo-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5324bc8daa3a98e12eb0b5ba90ae4638859ab2a4">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-TencentWeibo-2.8.1_8581af545e5db1fae13052736d8a04d9cb3ec6e9.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudio\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_8b769e1892c592d4dc1fd4e7eab733c61fd39ceb.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1f31a3bce42b35cbdf3230cf6d63ce120d687242">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_b2a78cba6a43fead3757b0199391ba624ef1ca39.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\MobTools-2017.0216.1054.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ede8ab947b1cabf937bf36d8ec51fcd9d61eba84">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\MobTools-2017.0216.1054_b38c913b7defb78eca20cff26d9c80817ce00c82.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_8e57061988f4c3440ed9f7a6fd2b1350bf6c55d8.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-Email-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="88417ebcaca5aef34934f715f6c4005d1f491487">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-Email-2.8.1_2ded7a98da803b0106561627c1ec166d2e8db53f.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-Wechat-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="80ee36c9074e68409cd3db8c3227a6f18bebf983">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-Wechat-2.8.1_73aa4871e4d9b2094ab2e5da3a7bd29bdffdef5c.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\libs\ShareSDK-QQ-2.8.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="15ec01ae7f0c4357f010acb66f76628260786628">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\ShareSDK-QQ-2.8.1_3e493b026f3e7ce8d15182d9667ebeba739446fc.jar" />
+    </item>
+    <item
+        jar="H:\AndroidWork\ssss\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="H:\AndroidWork\ssss\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_f65fd8532ae5384c8de7d753c86a9dd77f563a50.jar" />
+    </item>
+
+</items>

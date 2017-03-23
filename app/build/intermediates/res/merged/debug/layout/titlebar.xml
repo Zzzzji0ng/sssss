@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_red_bg">
+    <TextView
+        android:id="@+id/tv_titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:text="这是标题"/>
+
+    <!--左侧按钮-->
+    <ImageButton
+        android:id="@+id/im_menu"
+        android:visibility="visible"
+        android:src="@drawable/img_menu"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"/>
+    <!--设置背景为透明  离左端8dp 垂直居中  一般不可见-->
+
+    <ImageButton
+        android:id="@+id/change_location_menu"
+        android:visibility="gone"
+        android:src="@drawable/img_menu"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        />
+
+
+</RelativeLayout>

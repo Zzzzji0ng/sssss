@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/Item_Image"
+        android:layout_width="100dp"
+        android:layout_height="80sp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:padding="3dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/news_pic_default"/>
+    <!--拉伸  距离左边的距离 边距-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/Item_Image"
+        android:orientation="vertical">
+        <!--垂直居中  距离左边的边距 -->
+        <TextView
+            android:id="@+id/Item_Title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+        <!--ellipsize 表示显示不下的用...代替-->
+
+        <TextView
+            android:id="@+id/Item_Time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:text="时间信息"
+            android:textColor="#44000000"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/icon_news_comment_num"/>
+
+
+</RelativeLayout>

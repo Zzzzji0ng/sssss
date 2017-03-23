@@ -1,0 +1,286 @@
+[
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\news_top_viewpager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\news_top_viewpager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\uvv_on_loading_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\layout\\uvv_on_loading_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\basepager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\basepager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_complete_pic.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_show_complete_pic.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_picture_detail.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_picture_detail.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\videopager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\videopager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\uvv_player_controller.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\layout\\uvv_player_controller.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\newstitlebar.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\newstitlebar.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\news_detail_pager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\news_detail_pager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\videolistviewresource.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\videolistviewresource.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\picture_item.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\picture_item.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\titlebar.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\titlebar.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settinglayout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\settinglayout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_city_selector.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_city_selector.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simpleitem.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\simpleitem.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_guide.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_guide.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\newstabviewpagerdetail.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\newstabviewpagerdetail.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\uvv_on_error_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\layout\\uvv_on_error_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_header.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\refresh_header.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\button_refresh_video.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\button_refresh_video.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_weather_detail.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_weather_detail.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\convertvier_picture.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\convertvier_picture.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_tab_detial_pager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\item_tab_detial_pager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_video_play.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_video_play.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\slidingmenumain.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\SlidingMenu-library\\unspecified\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news_detail.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\activity_news_detail.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_footer.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\refresh_footer.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\leftmenu.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\leftmenu.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\videogridviewresource.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\videogridviewresource.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pic_select_pager.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\pic_select_pager.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\contentfragmenu.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\layout\\contentfragmenu.xml"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+    }
+]
