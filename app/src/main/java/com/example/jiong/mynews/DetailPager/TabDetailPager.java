@@ -64,6 +64,7 @@ public class TabDetailPager extends NewsDetailBasePager {
     public TabDetailPager(Context context, String text) {
         super(context);
         this.text = text;
+
     }
 
     @Override
@@ -151,7 +152,6 @@ public class TabDetailPager extends NewsDetailBasePager {
                 listView.onRreshFinish(true);
                 processData(result);
                 /*解析并显示数据   具体显示方法 在这个方法里面执行  。。*/
-                Toast.makeText(mContext, "新闻加载成功", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -396,7 +396,7 @@ public class TabDetailPager extends NewsDetailBasePager {
             /*根据位置获取数据*/
             NewsContentPagerBean.ResultBean.DataBean dataBean = dataBeanAllList.get(position);
             Glide
-            .with(mContext)
+                    .with(mContext)
                     .load(dataBean.getThumbnail_pic_s())
                     .centerCrop()
                     .placeholder(R.drawable.news_pic_default)//默认的图片

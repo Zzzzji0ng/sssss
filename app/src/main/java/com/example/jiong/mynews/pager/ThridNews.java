@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jiong.mynews.Activity.VideoPlayActivity;
@@ -136,6 +137,10 @@ public class ThridNews extends BasePager implements View.OnClickListener{
             @Override
             public void onSuccess(String result) {
                 if (type==TYPE1){
+                    if (result.contains("\"showapi_res_code\":-1005")){
+                        Toast.makeText(mContext,"请检查是否为北京时间",Toast.LENGTH_SHORT).show();
+                        onFinished();
+                    }
                     processData(result);
                 }else if (type==TYPE2){
                     processDatalist(result);

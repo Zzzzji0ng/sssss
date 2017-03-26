@@ -177,4 +177,6 @@ public class ContentFragment extends BaseFragment {
             container.removeView((View) object);
         }
     }
+
+
 }

@@ -36,6 +36,7 @@ public class RefreshListView extends ListView {
     private int headerViewHeight;/*下来刷新控件的高度*//*用来判断是否显示完全*/
     private int ReFreshListViewHeight = -1;/*整个Refreshlistview 的高度*/
     private float startY = 0; /*记录起始位置*/
+    private Context context;
 
     private static final int PULL_DOWN_REFRESH = 1;  /*下拉刷新状态*/
     private static final int RELEASE_REFRESH = 2; /*手松刷新状态*/
@@ -61,6 +62,7 @@ public class RefreshListView extends ListView {
         initHeaderrView(context);
         initFootView(context);
         iniAnimation();/*下拉刷新的动画*/
+        this.context=context;
     }
 
     private void initHeaderrView(Context context) {
@@ -264,6 +266,7 @@ public class RefreshListView extends ListView {
 
         if (success) {
             pull_down_date_text.setText("更新时间:" + getRefreshTime());
+            /*Toast.makeText(context,"新闻更新成功",Toast.LENGTH_SHORT).show();*/
         }
     }
 

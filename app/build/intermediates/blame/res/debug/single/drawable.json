@@ -8,6 +8,10 @@
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layout_border.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable\\layout_border.xml"
+    },
+    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },

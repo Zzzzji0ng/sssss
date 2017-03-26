@@ -4,10 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +15,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.jiong.mynews.R;
-import com.example.jiong.mynews.Utils.BitmapUtils;
 import com.example.jiong.mynews.Utils.Constants;
-import com.example.jiong.mynews.Utils.NetCacheUtils;
 import com.example.jiong.mynews.domain.PicsContentPagerBean;
 import com.google.gson.Gson;
 
@@ -40,13 +36,13 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
     private List<PicsContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> PicDataBeanList;
     private int CONCURRENT_TYPE =0/*记录位置*/;
     private int temp=0; /*记录选定的位置*/
-    private BitmapUtils bitmapUtils;
+    /*private BitmapUtils bitmapUtils;
     private Handler handler =new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what){
-                case NetCacheUtils.SUCCESS:  /*请求图片成功*/
+                case NetCacheUtils.SUCCESS:  *//*请求图片成功*//*
                     Bitmap bitmap= (Bitmap) msg.obj;
                     int position =msg.arg1;
                     Log.d("TAG","图片请求成功"+position);
@@ -57,16 +53,16 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
                         }
                     }
                     break;
-                case NetCacheUtils.FAIL:   /*请求图片失败*/
+                case NetCacheUtils.FAIL:   *//*请求图片失败*//*
 
                     break;
             }
         }
-    };
+    };*/
 
     public PictureDetailActivity() {
         super();
-        bitmapUtils=new BitmapUtils(handler);
+        /*bitmapUtils=new BitmapUtils(handler);*/
     }
 
     @Override
@@ -74,7 +70,7 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Intent intent=getIntent();
         type = intent.getStringExtra("TYPE");
-        Log.d("textTag",type.toString());
+        Log.d("textTag",type);
         initView();
         initPicDate(type);
     }
@@ -229,25 +225,25 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
                 viewholder = (ViewHolder) convertView.getTag();
             }
             PicsContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean contentlistbean=PicDataBeanList.get(position);
-             Log.d("pic_text",contentlistbean.getImg());
+            Log.d("pic_text",contentlistbean.getImg());
             viewholder.text_view.setText(contentlistbean.getTitle());
 
             //用 glide 获取图片
-            /*Glide
+            Glide
                     .with(PictureDetailActivity.this)
                     .load(contentlistbean.getImg())
                     .centerCrop()
-                    .placeholder(R.drawable.news_pic_default)//默认的图片
+                    .placeholder(R.drawable.home_scroll_default)//默认的图片
                     .crossFade()
-                    .into(viewholder.image_view); //图片实例*/
+                    .into(viewholder.image_view); //图片实例
 
             /*自定义三级缓存图片*/
-            viewholder.image_view.setTag(position);/*设置tag  以便获得相应的实例*/
-            Bitmap bitmap=bitmapUtils.getBitmap(contentlistbean.getImg(),position); /*这是在主线程*/
+            /*viewholder.image_view.setTag(position);*//*设置tag  以便获得相应的实例*//*
+            Bitmap bitmap=bitmapUtils.getBitmap(contentlistbean.getImg(),position); *//*这是在主线程*//*
             if (bitmap!=null){
-                /*因为在主线程  图片来源只能是内存或者是本地*/
+                *//*因为在主线程  图片来源只能是内存或者是本地*//*
                 viewholder.image_view.setImageBitmap(bitmap);
-            }
+            }*/
 
             return convertView;
         }

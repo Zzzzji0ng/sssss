@@ -43,7 +43,7 @@ public class MyService extends Service {
                 }
             }).start();
             AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            int time = 3 * 60 * 60 * 1000;/*更新周期*/
+            int time = 3 * 60 * 1000;/*更新周期*/
             Long ReTime = (time + SystemClock.elapsedRealtime());
             Intent i = new Intent(MyService.this, MyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);

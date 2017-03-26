@@ -436,23 +436,23 @@
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\drawable-xhdpi-v4\\uvv_volume_btn.png"
     },
     {
-        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_facebook.png",
-        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_facebook.png"
-    },
-    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\ViewPagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_facebook.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_facebook.png"
     },
     {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_tumblr.png",
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_tumblr.png"
     },
     {
-        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\uvv_play_vb_bg_progress.png",
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\drawable-xhdpi-v4\\uvv_play_vb_bg_progress.png"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     }
 ]

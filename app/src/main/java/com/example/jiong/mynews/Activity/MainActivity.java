@@ -1,14 +1,17 @@
 package com.example.jiong.mynews.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.example.jiong.mynews.Fragment.ContentFragment;
 import com.example.jiong.mynews.Fragment.LeftFragment;
 import com.example.jiong.mynews.R;
+import com.example.jiong.mynews.Service.NewsPushService;
 import com.example.jiong.mynews.Utils.DensityUtil;
 import com.example.jiong.mynews.Utils.MynewsApplication;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -18,6 +21,7 @@ public class MainActivity extends SlidingFragmentActivity {
 
     public static final String LEFTMENU_TAG = "leftmenu_tag";
     public static final String CONTENTNEMU_TAG = "contentnemu_tag";
+    private boolean backFlag =false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class MainActivity extends SlidingFragmentActivity {
         ft.replace(R.id.leftmenuFragment, new LeftFragment(), LEFTMENU_TAG);
         ft.replace(R.id.ContentLayout, new ContentFragment(), CONTENTNEMU_TAG);
         ft.commit();
+
     }
 
 
@@ -52,5 +57,28 @@ public class MainActivity extends SlidingFragmentActivity {
         slidingMenu.setMode(SlidingMenu.LEFT);
         /*设置主页面占得宽度*/
         slidingMenu.setBehindOffset(DensityUtil.dip2px(this, 200));
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backFlag){
+            Intent intent =new Intent(MainActivity.this, NewsPushService.class);
+            startService(intent);
+            super.onBackPressed();
+        }else{
+            Toast.makeText(this, "双击退出", Toast.LENGTH_LONG).show();
+            backFlag=true;
+            new Thread(){
+                public void run() {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    backFlag=false;
+                };
+            }.start();
+        }
     }
 }
