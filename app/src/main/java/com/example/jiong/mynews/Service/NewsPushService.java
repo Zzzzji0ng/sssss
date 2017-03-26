@@ -17,6 +17,7 @@ import com.example.jiong.mynews.Activity.NewsDetailActivity;
 import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Receiver.NewsPushReceiver;
 import com.example.jiong.mynews.Utils.Constants;
+import com.example.jiong.mynews.domain.NewsInfomation;
 import com.example.jiong.mynews.domain.NewsContentPagerBean;
 import com.google.gson.Gson;
 
@@ -116,8 +117,16 @@ public class NewsPushService extends Service {
         //下拉显示的大图标
         builder.setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
         Intent intent = new Intent(this,NewsDetailActivity.class);
-        intent.putExtra("url",newsurl);
-        PendingIntent pIntent = PendingIntent.getActivity(this,0,intent,0);
+        NewsInfomation newsInfomation =new NewsInfomation();
+        newsInfomation.setFrom("notification");
+        newsInfomation.setTitle(title);
+        newsInfomation.setUrl(newsurl);
+        intent.putExtra("newsInfomation",newsInfomation);
+        Log.d("TAG",newsInfomation.toString());
+        /*intent.putExtra("url",newsurl);
+        intent.putExtra("From","notification");
+        intent.putExtra("title",title);*/
+        PendingIntent pIntent = PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
         //点击跳转的intent
         builder.setContentIntent(pIntent);
         Notification notification =builder.build();

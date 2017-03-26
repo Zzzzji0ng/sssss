@@ -11,10 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <WebView
-            android:id="@+id/news_webview"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+            <WebView
+                android:id="@+id/news_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ScrollView>
 
         <ProgressBar
             android:id="@+id/pb_status_down"

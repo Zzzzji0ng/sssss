@@ -9,12 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.example.jiong.mynews.Activity.AboutActivity;
 import com.example.jiong.mynews.R;
+import com.example.jiong.mynews.Utils.CacheUtils;
 import com.example.jiong.mynews.Utils.DataCleanManager;
 import com.example.jiong.mynews.base.BasePager;
 
@@ -24,11 +27,13 @@ import com.example.jiong.mynews.base.BasePager;
 public class SettingPager extends BasePager {
     private ListView listview_setting;
     private BaseAdapter adapter;
-    private String[] array = {"手动清除缓存", "关于"};
+    private String[] array = {"手动清除缓存", "是否开启要闻推送?","关于"};
     private String s;
+    private Boolean PushState;
 
     public SettingPager(Context context) {
         super(context);
+        PushState=CacheUtils.getBoolean(mContext,"Push_State");
     }
 
     @Override
@@ -65,7 +70,7 @@ public class SettingPager extends BasePager {
                         builder.setCancelable(true);
                         builder.show();
                         break;
-                    case 1:
+                    case 2:
                         Intent intent = new Intent(mContext, AboutActivity.class);
                         mContext.startActivity(intent);
                         break;
@@ -105,6 +110,7 @@ public class SettingPager extends BasePager {
                 convertView = View.inflate(mContext, R.layout.simpleitem, null);
                 TextView simple_list_item = (TextView) convertView.findViewById(R.id.simple_list_item);
                 TextView size= (TextView) convertView.findViewById(R.id.size);
+                ToggleButton push_button= (ToggleButton) convertView.findViewById(R.id.push_button);
                 switch (position) {
                     case 0:
                         if (s!=null){
@@ -113,6 +119,30 @@ public class SettingPager extends BasePager {
                         }
                         break;
                     case 1:
+                        if (PushState==true){
+                            push_button.setChecked(true);
+                        }else {
+                            push_button.setChecked(false);
+                        }
+                        simple_list_item.setText("是否开启推送?");
+                        push_button.setVisibility(View.VISIBLE);
+                        push_button.setBackgroundResource(R.drawable.toggle_button);
+                        push_button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                            @Override
+                            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                if (isChecked){
+                                    //点击状态
+                                    Toast.makeText(mContext,"要闻推送已开启",Toast.LENGTH_SHORT).show();
+                                    CacheUtils.putBoolean(mContext,"Push_State",true);
+                                }else {
+                                    //微电机状态
+                                    Toast.makeText(mContext,"要闻推送已关闭",Toast.LENGTH_SHORT).show();
+                                    CacheUtils.putBoolean(mContext,"Push_State",false);
+                                }
+                            }
+                        });
+
+                    case 2:
                         simple_list_item.setText(array[position]);
                         break;
                 }

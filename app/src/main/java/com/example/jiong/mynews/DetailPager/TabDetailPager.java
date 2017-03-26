@@ -23,6 +23,7 @@ import com.example.jiong.mynews.Activity.NewsDetailActivity;
 import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Utils.CacheUtils;
 import com.example.jiong.mynews.Utils.Constants;
+import com.example.jiong.mynews.domain.NewsInfomation;
 import com.example.jiong.mynews.base.NewsDetailBasePager;
 import com.example.jiong.mynews.domain.NewsContentPagerBean;
 import com.example.jiong.mynews.view.HorizontalScrollViewpager;
@@ -491,8 +492,11 @@ public class TabDetailPager extends NewsDetailBasePager {
             Intent intent = new Intent(mContext, NewsDetailActivity.class);
             String url = bean.getUrl();
             String title= bean.getTitle();
-            intent.putExtra("url", url);
-            intent.putExtra("title",title);
+            NewsInfomation infomation=new NewsInfomation();
+            infomation.setFrom("TabDetailPager");
+            infomation.setUrl(url);
+            infomation.setTitle(title);
+            intent.putExtra("newsInfomation",infomation);
             mContext.startActivity(intent);
         }
     } /*新闻列表点击事件监听器*/

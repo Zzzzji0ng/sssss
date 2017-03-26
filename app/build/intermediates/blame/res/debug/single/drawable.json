@@ -112,6 +112,10 @@
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\toggle_button.xml",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable\\toggle_button.xml"
+    },
+    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_textcolor_selector.xml",
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable\\btn_textcolor_selector.xml"
     },

@@ -428,6 +428,10 @@
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\push_open.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-hdpi\\push_open.png"
+    },
+    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\thundershower.png",
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-hdpi\\thundershower.png"
     },
@@ -438,6 +442,10 @@
     {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\push_close.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-hdpi\\push_close.png"
     },
     {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\guide_3.jpg",

@@ -12,6 +12,7 @@ import com.example.jiong.mynews.Fragment.ContentFragment;
 import com.example.jiong.mynews.Fragment.LeftFragment;
 import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Service.NewsPushService;
+import com.example.jiong.mynews.Utils.CacheUtils;
 import com.example.jiong.mynews.Utils.DensityUtil;
 import com.example.jiong.mynews.Utils.MynewsApplication;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -32,7 +33,10 @@ public class MainActivity extends SlidingFragmentActivity {
         super.onCreate(savedInstanceState);
         initSlidingMenu();/*  选定代码 Ctrl alt M 快速提取方法*/
         iniFragment();/*更换碎片*/
-
+        if (CacheUtils.getBoolean(this,"Push_State")){
+            Intent intent =new Intent(MainActivity.this, NewsPushService.class);
+            startService(intent);
+        }/*如果已经开启了推送  则开启这个进程*/
     }
 
     private void iniFragment() {
@@ -62,9 +66,7 @@ public class MainActivity extends SlidingFragmentActivity {
     @Override
     public void onBackPressed() {
         if(backFlag){
-            Intent intent =new Intent(MainActivity.this, NewsPushService.class);
-            startService(intent);
-            super.onBackPressed();
+            MynewsApplication.getInstance().exit();
         }else{
             Toast.makeText(this, "双击退出", Toast.LENGTH_LONG).show();
             backFlag=true;

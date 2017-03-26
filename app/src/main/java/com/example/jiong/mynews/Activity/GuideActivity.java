@@ -48,6 +48,7 @@ public class GuideActivity extends Activity implements View.OnClickListener {
         if (v == ButtonStart) {
             /*保存已经引导过的标志*/
             CacheUtils.putBoolean(this, START_MAIN, true);
+            CacheUtils.putBoolean(this,"Push_State",true);
             Intent intent = new Intent(GuideActivity.this, MainActivity.class);
             startActivity(intent);
             finish();

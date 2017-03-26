@@ -3,8 +3,9 @@ package com.example.jiong.mynews.Activity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -14,6 +15,7 @@ import android.widget.ProgressBar;
 
 import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Utils.MynewsApplication;
+import com.example.jiong.mynews.domain.NewsInfomation;
 
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
@@ -29,6 +31,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     private String title;
     private int temp = 1;/*用来记录dialog选择的位置  若没有确定不生效*/
     private int TEXTSIZE = 1;/*dialog默认的位置*/
+    private String From;
 
 
     @Override
@@ -37,9 +40,11 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         ShareSDK.initSDK(this);
         MynewsApplication.getInstance().addActivity(this);
         initView();
-        url = getIntent().getStringExtra("url");
-        title = getIntent().getStringExtra("title");
-        Log.d("webUrl", url);
+        Intent intent=getIntent();
+        NewsInfomation newsInfomation = (NewsInfomation) intent .getSerializableExtra("newsInfomation");
+        url = newsInfomation.getUrl();
+        title = newsInfomation.getTitle();
+        From= newsInfomation.getFrom();
         settings = news_webview.getSettings();/*获得设置器*/
         /*settings.setJavaScriptEnabled(true);*//*支持JS*/
         /*settings.setUseWideViewPort(true);*//*双击变大*/
@@ -50,6 +55,12 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
                 pb_status_down.setVisibility(View.GONE);
+            }
+        });
+        news_webview.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
             }
         });
         news_webview.loadUrl(url);
@@ -117,6 +128,17 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
                 break;
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (From.equals("notification")){
+            Intent intent=new Intent(NewsDetailActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
 
     private void showShare(String title, String url) {
         OnekeyShare oks = new OnekeyShare();

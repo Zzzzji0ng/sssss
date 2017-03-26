@@ -9,8 +9,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="@android:color/white"
-        android:layout_centerInParent="true"
-        android:text="这是标题"/>
+        android:layout_centerInParent="true"/>
 
     <!--左侧按钮-->
     <ImageButton
