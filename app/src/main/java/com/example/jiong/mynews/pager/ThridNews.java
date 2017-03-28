@@ -46,8 +46,11 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     private int page2=50;/*listview 从第50 页开始获得数据*/
     public static final String TYPE1="GRIDLIST";
     public static final String TYPE2="LISTVIEW";
+    /*private int height;*/
+    /*private int width;*/
     private View Footview;
     private List<VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> contentlist;
+    private List<VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> morecontentlist;
     /*private VideoBitmapUtils videobitmapUtils;
     private Handler handler =new Handler(){
         @Override
@@ -66,14 +69,14 @@ public class ThridNews extends BasePager implements View.OnClickListener{
                             }
                         }
                         break;
-                    case NetCacheUtils.FAIL:   *//*请求图片失败*//*
+                    case NetCacheUtils.FAIL:  *//* 请求图片失败*//*
 
                         break;
                 }
 
-            }else if (viedo_listview_layout.getVisibility()==View.VISIBLE){
+            }*//*else if (viedo_listview_layout.getVisibility()==View.VISIBLE){
                 switch (msg.what){
-                    case NetCacheUtils.SUCCESS:  *//*请求图片成功*//*
+                    case videoimageNetCacheUtils.SUCCESS: *//**//* 请求图片成功*//**//*
                         Bitmap bitmap= (Bitmap) msg.obj;
                         int position =msg.arg1;
                         Log.d("TAG","图片请求成功"+position);
@@ -84,11 +87,11 @@ public class ThridNews extends BasePager implements View.OnClickListener{
                             }
                         }
                         break;
-                    case NetCacheUtils.FAIL:   *//*请求图片失败*//*
+                    case videoimageNetCacheUtils.FAIL:  *//**//* 请求图片失败*//**//*
 
                         break;
                 }
-            }
+            }*//*
         }
     };*/
     public ThridNews(Context context) {
@@ -166,12 +169,12 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     }
     private void processDatalist(String result){
         VideoContentPagerBean bean=parsedJson(result);
-        contentlist=bean.getShowapi_res_body().getPagebean().getContentlist();
+        morecontentlist=bean.getShowapi_res_body().getPagebean().getContentlist();
         Footview =View.inflate(mContext,R.layout.button_refresh_video,null);
         Button bigmore= (Button) Footview.findViewById(R.id.Button_more_video_big);
         video_listView.addFooterView(Footview);
         video_listView.setAdapter(new MyListviewAdapter());
-        video_listView.setOnItemClickListener(new MyVideoGridviewListener());
+        video_listView.setOnItemClickListener(new MyVideoListviewListener());
         bigmore.setOnClickListener(this);
     }
 
@@ -216,18 +219,17 @@ public class ThridNews extends BasePager implements View.OnClickListener{
                     .with(mContext)
                     .load(contentbean.getProfile_image())
                     .centerCrop()
-                    .placeholder(R.drawable.news_pic_default)//默认的图片
+                    .placeholder(R.drawable.backblack)//默认的图片
                     .crossFade()
                     .into(viewHolder.headImage); //图片实例
-            /*视频缩略图还未解决*/
-            viewHolder.videoImage.setImageResource(R.drawable.default_player);
-            /*viewHolder.videoImage.setTag(position);*//*设置tag  以便获得相应的实例*/
-            /*Bitmap bitmap= BitmapUtils.getBitmap(contentbean.getVideo_uri(),position); *//*这是在主线程*//*
+            //**//*视频缩略图还未解决*//**//**/
+            /*viewHolder.videoImage.setTag(position);*//*设置tag  以便获得相应的实例*//*
+            VideoBitmapUtils  videoBitmapUtils =new VideoBitmapUtils(mContext,handler);
+            Bitmap bitmap= videoBitmapUtils.getBitmap(mContext,contentbean.getVideo_uri(),position,TYPE2);*//* 这是在主线程*//*
             if (bitmap!=null){
                 *//*因为在主线程  图片来源只能是内存或者是本地*//*
                 viewHolder.videoImage.setImageBitmap(bitmap);
             }*/
-
 
             viewHolder.love.setText(contentbean.getLove()+"赞");
             String text=contentbean.getText().replace(" ","");
@@ -251,6 +253,17 @@ public class ThridNews extends BasePager implements View.OnClickListener{
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             String text=contentlist.get(position).getVideo_uri();
             String title=contentlist.get(position).getText();
+            Intent intent=new Intent(mContext, VideoPlayActivity.class);
+            intent.putExtra("video_url",text);
+            intent.putExtra("video_title",title);
+            mContext.startActivity(intent);
+        }
+    }
+    private class MyVideoListviewListener implements android.widget.AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            String text=morecontentlist.get(position).getVideo_uri();
+            String title=morecontentlist.get(position).getText();
             Intent intent=new Intent(mContext, VideoPlayActivity.class);
             intent.putExtra("video_url",text);
             intent.putExtra("video_title",title);
@@ -326,30 +339,32 @@ public class ThridNews extends BasePager implements View.OnClickListener{
             }else {
                 listviewViewHolder= (ThridNews.listviewViewHolder) convertView.getTag();
             }
-            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean contentbean=contentlist.get(position);
+            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean morecontentbean=morecontentlist.get(position);
+            Log.d("TAG",morecontentbean.toString());
             Glide
                     .with(mContext)
-                    .load(contentbean.getProfile_image())
+                    .load(morecontentbean.getProfile_image())
                     .centerCrop()
-                    .placeholder(R.drawable.news_pic_default)//默认的图片
+                    .placeholder(R.drawable.backblack)//默认的图片
                     .crossFade()
                     .into(listviewViewHolder.headImage); //图片实例
             /*视频缩略图还未解决*/
+/*
             listviewViewHolder.list_videoImage.setImageResource(R.drawable.default_player);
+*/
             /*listviewViewHolder.list_videoImage.setTag(position);*//*设置tag  以便获得相应的实例*//*
-                Bitmap bitmap= videobitmapUtils.getBitmap(mContext,contentbean.getVideo_uri(),position,TYPE1); *//*这是在主线程*//*
-                if (bitmap!=null){
+            VideoBitmapUtils  videoBitmapUtils =new VideoBitmapUtils(mContext,handler);
+            Bitmap bitmap= videoBitmapUtils.getBitmap(mContext,contentbean.getVideo_uri(),position,TYPE2); *//*这是在主线程*//*
+            if (bitmap!=null){
                 *//*因为在主线程  图片来源只能是内存或者是本地*//*
                 listviewViewHolder.list_videoImage.setImageBitmap(bitmap);
             }*/
 
-
-
             /*缩略图部分   使用自定义的三级缓存*/
-            String text=contentbean.getText().replace(" ","");
+            String text=morecontentbean.getText().replace(" ","");
             listviewViewHolder.list_videoTitle.setText(text);
-            listviewViewHolder.list_videoTime.setText(contentbean.getCreate_time());
-            listviewViewHolder.list_videoAuthor.setText(contentbean.getName());
+            listviewViewHolder.list_videoTime.setText(morecontentbean.getCreate_time());
+            listviewViewHolder.list_videoAuthor.setText(morecontentbean.getName());
             return convertView;
         }
     }

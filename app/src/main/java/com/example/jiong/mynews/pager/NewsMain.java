@@ -57,6 +57,7 @@ public class NewsMain extends BasePager {
         }
         news_Tab_viewpager.setAdapter(new MyPagerAdapter());
         news_Tab_viewpager.setOffscreenPageLimit(10);
+        /*设置TabDetailPager回收问题*/
         tabPageIndicator.setViewPager(news_Tab_viewpager);
         /*绑定viewpager  以后监听页面的变化  用TabPageindicator实现*/
         tabPageIndicator.setOnPageChangeListener(new MyOnPageChangeListener());

@@ -36,34 +36,6 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
     private List<PicsContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> PicDataBeanList;
     private int CONCURRENT_TYPE =0/*记录位置*/;
     private int temp=0; /*记录选定的位置*/
-    /*private BitmapUtils bitmapUtils;
-    private Handler handler =new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what){
-                case NetCacheUtils.SUCCESS:  *//*请求图片成功*//*
-                    Bitmap bitmap= (Bitmap) msg.obj;
-                    int position =msg.arg1;
-                    Log.d("TAG","图片请求成功"+position);
-                    if (Pic_ListView!=null&&Pic_ListView.isShown()){
-                        ImageView imageView= (ImageView) Pic_ListView.findViewWithTag(position);
-                        if (imageView!=null && bitmap!=null){
-                            imageView.setImageBitmap(bitmap);
-                        }
-                    }
-                    break;
-                case NetCacheUtils.FAIL:   *//*请求图片失败*//*
-
-                    break;
-            }
-        }
-    };*/
-
-    public PictureDetailActivity() {
-        super();
-        /*bitmapUtils=new BitmapUtils(handler);*/
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,11 +153,10 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
         });
     }
 
-    private void processPicData(String Json) {
+    private void processPicData(String result) {
         /*在这里解析和展示数据*/
-        PicsContentPagerBean bean = parsedJson(Json);
+        PicsContentPagerBean bean = parsedJson(result);
         PicDataBeanList=bean.getShowapi_res_body().getPagebean().getContentlist();
-        Log.d("pic_text",PicDataBeanList.get(1).getTitle());
         Pic_ListView.setAdapter(new MyPicListAdapter());
         Pic_ListView.setOnItemClickListener(new MyOnItemClickListener());
     }
@@ -236,14 +207,6 @@ public class PictureDetailActivity extends Activity implements View.OnClickListe
                     .placeholder(R.drawable.home_scroll_default)//默认的图片
                     .crossFade()
                     .into(viewholder.image_view); //图片实例
-
-            /*自定义三级缓存图片*/
-            /*viewholder.image_view.setTag(position);*//*设置tag  以便获得相应的实例*//*
-            Bitmap bitmap=bitmapUtils.getBitmap(contentlistbean.getImg(),position); *//*这是在主线程*//*
-            if (bitmap!=null){
-                *//*因为在主线程  图片来源只能是内存或者是本地*//*
-                viewholder.image_view.setImageBitmap(bitmap);
-            }*/
 
             return convertView;
         }

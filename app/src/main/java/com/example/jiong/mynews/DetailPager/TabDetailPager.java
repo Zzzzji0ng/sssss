@@ -400,7 +400,7 @@ public class TabDetailPager extends NewsDetailBasePager {
                     .with(mContext)
                     .load(dataBean.getThumbnail_pic_s())
                     .centerCrop()
-                    .placeholder(R.drawable.news_pic_default)//默认的图片
+                    .placeholder(R.drawable.home_scroll_default)//默认的图片
                     .crossFade()
                     .into(viewholder.Item_Image); //图片实例
 
@@ -467,7 +467,7 @@ public class TabDetailPager extends NewsDetailBasePager {
         @Override
         public void onLoadMore() {
             if (cishu == 2) {
-                Toast.makeText(mContext, "没有更多新闻", Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(mContext, "没有更多新闻", Toast.LENGTH_SHORT).show();*/
                 listView.onRreshFinish(false);
             } else {
                 getMoreDatefromNet();
@@ -506,6 +506,7 @@ public class TabDetailPager extends NewsDetailBasePager {
         TextView Item_Title_text;
         TextView Item_Time_text;
     } /*RefreshListView 的子项缓存类*/
+
 
 
 }

@@ -22,7 +22,6 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="8dp"/>
     <!--设置背景为透明  离左端8dp 垂直居中  一般不可见-->
-
     <ImageButton
         android:id="@+id/change_location_menu"
         android:visibility="gone"

@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jiong.mynews.Activity.MainActivity;
 import com.example.jiong.mynews.R;
+import com.example.jiong.mynews.Utils.PhoneNetStates;
 import com.example.jiong.mynews.base.BaseFragment;
 import com.example.jiong.mynews.base.BasePager;
 import com.example.jiong.mynews.pager.NewsMain;
@@ -28,6 +30,7 @@ import java.util.ArrayList;
  * Created by Jiong on 2017/2/11.
  */
 public class ContentFragment extends BaseFragment {
+    private  Boolean netstate;
     @ViewInject(R.id.RG_mian)
     private RadioGroup radioGroup;
     /*实例化ridioGroup*/
@@ -48,6 +51,16 @@ public class ContentFragment extends BaseFragment {
         x.view().inject(this, view);/*导入第三方包  先写出这一行 再实例化viewpager*/
         tv_titletext = (TextView) view.findViewById(R.id.tv_titletext);
         im_menu = (ImageButton) view.findViewById(R.id.im_menu);
+        netstate = PhoneNetStates.isNetworkConnected(mContext);
+        if (netstate){
+            int netype =PhoneNetStates.GetNetype(mContext);
+            if (netype==1){
+                Toast.makeText(mContext,"当前使用wifi网络",Toast.LENGTH_SHORT).show();
+            }else
+                Toast.makeText(mContext,"当前使用移动蜂窝网络",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(mContext,"请检查网络开关",Toast.LENGTH_SHORT).show();
+        }
         return view;
     }
 
@@ -177,6 +190,4 @@ public class ContentFragment extends BaseFragment {
             container.removeView((View) object);
         }
     }
-
-
 }

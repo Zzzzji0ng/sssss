@@ -474,21 +474,21 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020048;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020049;
 		public static final int abc_textfield_search_material = 0x7f02004a;
-		public static final int notification_template_icon_bg = 0x7f0200e0;
-		public static final int uvv_back_btn = 0x7f0200c9;
-		public static final int uvv_common_ic_loading_icon = 0x7f0200ca;
-		public static final int uvv_itv_player_play = 0x7f0200cb;
-		public static final int uvv_on_error = 0x7f0200cc;
-		public static final int uvv_play_vb_bg = 0x7f0200cd;
-		public static final int uvv_play_vb_bg_progress = 0x7f0200ce;
-		public static final int uvv_player_player_btn = 0x7f0200cf;
-		public static final int uvv_player_scale_btn = 0x7f0200d0;
-		public static final int uvv_progress_rotate = 0x7f0200d1;
-		public static final int uvv_seek_dot = 0x7f0200d2;
-		public static final int uvv_star_play_progress_seek = 0x7f0200d3;
-		public static final int uvv_star_zoom_in = 0x7f0200d4;
-		public static final int uvv_stop_btn = 0x7f0200d5;
-		public static final int uvv_volume_btn = 0x7f0200d6;
+		public static final int notification_template_icon_bg = 0x7f0200df;
+		public static final int uvv_back_btn = 0x7f0200c8;
+		public static final int uvv_common_ic_loading_icon = 0x7f0200c9;
+		public static final int uvv_itv_player_play = 0x7f0200ca;
+		public static final int uvv_on_error = 0x7f0200cb;
+		public static final int uvv_play_vb_bg = 0x7f0200cc;
+		public static final int uvv_play_vb_bg_progress = 0x7f0200cd;
+		public static final int uvv_player_player_btn = 0x7f0200ce;
+		public static final int uvv_player_scale_btn = 0x7f0200cf;
+		public static final int uvv_progress_rotate = 0x7f0200d0;
+		public static final int uvv_seek_dot = 0x7f0200d1;
+		public static final int uvv_star_play_progress_seek = 0x7f0200d2;
+		public static final int uvv_star_zoom_in = 0x7f0200d3;
+		public static final int uvv_stop_btn = 0x7f0200d4;
+		public static final int uvv_volume_btn = 0x7f0200d5;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0c00a6;

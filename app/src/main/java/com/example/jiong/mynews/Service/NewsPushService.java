@@ -17,8 +17,8 @@ import com.example.jiong.mynews.Activity.NewsDetailActivity;
 import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Receiver.NewsPushReceiver;
 import com.example.jiong.mynews.Utils.Constants;
-import com.example.jiong.mynews.domain.NewsInfomation;
 import com.example.jiong.mynews.domain.NewsContentPagerBean;
+import com.example.jiong.mynews.domain.NewsInfomation;
 import com.google.gson.Gson;
 
 import org.xutils.common.Callback;
@@ -49,7 +49,7 @@ public class NewsPushService extends Service {
             }
         }).start();
         AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        int time =3*60*1000;/*更新周期*/
+        int time =5*60*60*1000;/*更新周期*/
         Long ReTime = (time + SystemClock.elapsedRealtime());
         Intent i = new Intent(NewsPushService.this, NewsPushReceiver.class);
         PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);
@@ -112,6 +112,7 @@ public class NewsPushService extends Service {
         /*builder.setNumber(2);*/
         //可以点击通知栏的删除按钮删除
         builder.setAutoCancel(true);
+        builder.setDefaults(Notification.DEFAULT_SOUND|Notification.DEFAULT_VIBRATE);
         //系统状态栏显示的小图标
         builder.setSmallIcon(R.mipmap.ic_launcher);
         //下拉显示的大图标

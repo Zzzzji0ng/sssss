@@ -276,12 +276,12 @@
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_yixinmoments.png"
     },
     {
-        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_tencentweibo.png",
-        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_tencentweibo.png"
-    },
-    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_qzone.png",
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_qzone.png"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_tencentweibo.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_tencentweibo.png"
     },
     {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
@@ -436,12 +436,12 @@
         "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\universalvideoview\\unspecified\\res\\drawable-xhdpi-v4\\uvv_volume_btn.png"
     },
     {
-        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
-        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\ViewPagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_facebook.png",
         "source": "H:\\AndroidWork\\ssss\\app\\src\\main\\res\\drawable-xhdpi\\ssdk_oks_classic_facebook.png"
+    },
+    {
+        "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png",
+        "source": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\exploded-aar\\ssss\\ViewPagerIndicator_library\\unspecified\\res\\drawable-xhdpi-v4\\vpi__tab_selected_pressed_holo.9.png"
     },
     {
         "merged": "H:\\AndroidWork\\ssss\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ssdk_oks_classic_tumblr.png",

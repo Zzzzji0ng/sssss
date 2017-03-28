@@ -65,7 +65,11 @@
             android:name=".Service.NewsPushService"
             android:enabled="true"
             android:exported="true"/>
-        <receiver android:name=".Receiver.NewsPushReceiver"/>
+        <receiver android:name=".Receiver.NewsPushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"

@@ -5,8 +5,6 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.jiong.mynews.pager.ThridNews;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -24,10 +22,6 @@ public class videoimageNetCacheUtils {
     private int[] a;
     private int width;
     private int height;
-    private int width1;
-    private int width2;
-    private int height1;
-    private int height2;
 
     public videoimageNetCacheUtils(Context context, Handler handler, LocalCacheUtils localCacheUtils, MemoryCacheUtils memoryCacheUtils) {
         this.context = context;
@@ -36,11 +30,8 @@ public class videoimageNetCacheUtils {
         this.memoryCacheUtils = memoryCacheUtils;
         service = Executors.newFixedThreadPool(10);
         a = DensityUtil.getScreenSize(context);
-        width1 = a[0] * 4 / 10;
-        height1 = a[1] / 6;
-        width2=a[0];
-        height2=a[1]/3;
-        /*先获得当前设备的宽度0.4   高度*1/6*/
+        width=DensityUtil.px2dip(context,a[0]);
+        height=DensityUtil.px2dip(context,a[1]);
     }
 
     public void getBitmapFromNet(String url, int position, String type) {
@@ -60,20 +51,13 @@ public class videoimageNetCacheUtils {
 
         @Override
         public void run() {
-            if (ThridNews.TYPE1.equals(type)){
-                width=width1;
-                height=height1;
-            } else if (ThridNews.TYPE2.equals(type)){
-                width=width2;
-                height=height2;
-            }
 
             try {
-                Bitmap bitmap = GetVideoImage.createVideoThumbnail(url, width1, height1);;
+                Bitmap bitmap = GetVideoImage.createVideoThumbnail(url, width, height);;
 
 
 
-                memoryCacheUtils.putBitmap(url, bitmap);
+                memoryCacheUtils.putBitmap(url, bitmap);  /*内存缓存存在问题*/
 
                     /*在本地中保存一份*/
                 localCacheUtils.putBitmap(url, bitmap);

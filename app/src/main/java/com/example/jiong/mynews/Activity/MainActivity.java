@@ -1,6 +1,5 @@
 package com.example.jiong.mynews.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,8 +10,6 @@ import android.widget.Toast;
 import com.example.jiong.mynews.Fragment.ContentFragment;
 import com.example.jiong.mynews.Fragment.LeftFragment;
 import com.example.jiong.mynews.R;
-import com.example.jiong.mynews.Service.NewsPushService;
-import com.example.jiong.mynews.Utils.CacheUtils;
 import com.example.jiong.mynews.Utils.DensityUtil;
 import com.example.jiong.mynews.Utils.MynewsApplication;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -33,10 +30,10 @@ public class MainActivity extends SlidingFragmentActivity {
         super.onCreate(savedInstanceState);
         initSlidingMenu();/*  选定代码 Ctrl alt M 快速提取方法*/
         iniFragment();/*更换碎片*/
-        if (CacheUtils.getBoolean(this,"Push_State")){
+        /*if (CacheUtils.getBoolean(this,"Push_State")){
             Intent intent =new Intent(MainActivity.this, NewsPushService.class);
             startService(intent);
-        }/*如果已经开启了推送  则开启这个进程*/
+        }*//*如果已经开启了推送  则开启这个进程*/
     }
 
     private void iniFragment() {

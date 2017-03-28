@@ -6,13 +6,12 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -68,7 +67,7 @@
             android:name="com.example.jiong.mynews.Activity.VideoPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" >
-                  android:label="@string/app_name" >
+            android:label="@string/app_name" >
         </activity>
 
         <service
@@ -76,7 +75,11 @@
             android:enabled="true"
             android:exported="true" />
 
-        <receiver android:name="com.example.jiong.mynews.Receiver.NewsPushReceiver" />
+        <receiver android:name="com.example.jiong.mynews.Receiver.NewsPushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="com.mob.tools.MobUIShell"
