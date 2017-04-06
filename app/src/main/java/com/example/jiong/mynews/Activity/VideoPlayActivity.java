@@ -12,12 +12,12 @@ import com.example.jiong.mynews.R;
 import com.universalvideoview.UniversalMediaController;
 import com.universalvideoview.UniversalVideoView;
 
-public class VideoPlayActivity extends AppCompatActivity implements UniversalVideoView.VideoViewCallback{
+public class VideoPlayActivity extends AppCompatActivity implements UniversalVideoView.VideoViewCallback {
 
     private static final String TAG = "MainActivity";
     private static final String SEEK_POSITION_KEY = "SEEK_POSITION_KEY";
-    private  String VIDEO_URL ;
-    private  String VIDEO_TITLE;
+    private String VIDEO_URL;
+    private String VIDEO_TITLE;
 
     UniversalVideoView mVideoView;
     UniversalMediaController mMediaController;
@@ -34,8 +34,8 @@ public class VideoPlayActivity extends AppCompatActivity implements UniversalVid
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_play);
-        VIDEO_URL=getIntent().getStringExtra("video_url");
-        VIDEO_TITLE=getIntent().getStringExtra("video_title");
+        VIDEO_URL = getIntent().getStringExtra("video_url");
+        VIDEO_TITLE = getIntent().getStringExtra("video_title");
         mVideoLayout = findViewById(R.id.video_layout);
         mBottomLayout = findViewById(R.id.bottom_layout);
         mVideoView = (UniversalVideoView) findViewById(R.id.videoView);

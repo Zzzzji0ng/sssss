@@ -40,11 +40,11 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         ShareSDK.initSDK(this);
         MynewsApplication.getInstance().addActivity(this);
         initView();
-        Intent intent=getIntent();
-        NewsInfomation newsInfomation = (NewsInfomation) intent .getSerializableExtra("newsInfomation");
+        Intent intent = getIntent();
+        NewsInfomation newsInfomation = (NewsInfomation) intent.getSerializableExtra("newsInfomation");
         url = newsInfomation.getUrl();
         title = newsInfomation.getTitle();
-        From= newsInfomation.getFrom();
+        From = newsInfomation.getFrom();
         settings = news_webview.getSettings();/*获得设置器*/
         /*settings.setJavaScriptEnabled(true);*//*支持JS*/
         /*settings.setUseWideViewPort(true);*//*双击变大*/
@@ -97,7 +97,7 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("设置文字大小");
         String[] items = new String[]{"大字体", "标准字体", "小字体"};
-        /*TEXTSIZE 默认的位置*/
+        /*TEXTSIZE 默认的位置   若为-1 不选*/
         builder.setSingleChoiceItems(items, TEXTSIZE, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -132,12 +132,11 @@ public class NewsDetailActivity extends Activity implements View.OnClickListener
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (From.equals("notification")){
-            Intent intent=new Intent(NewsDetailActivity.this,MainActivity.class);
+        if (From.equals("notification")) {
+            Intent intent = new Intent(NewsDetailActivity.this, MainActivity.class);
             startActivity(intent);
         }
     }
-
 
 
     private void showShare(String title, String url) {

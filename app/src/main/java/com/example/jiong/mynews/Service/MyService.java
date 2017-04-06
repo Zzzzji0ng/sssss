@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.example.jiong.mynews.Receiver.MyReceiver;
 import com.example.jiong.mynews.Utils.CacheUtils;
@@ -55,11 +54,9 @@ public class MyService extends Service {
 
     private void getWeatherDataFromNet(String WeatherCode) {
         String url = "http://wthrcdn.etouch.cn/weather_mini?citykey=" + WeatherCode;
-        Log.d("RUU", url);
         HttpUtil.SendHttpRequest(url, new HttpCallBackListener() {
             @Override
             public void OnFinish(String responce) {
-                Log.d("RUU", responce);
                 progressData(responce);
                 CacheUtils.putString(MyService.this, "weatherState", city + "," + wendu + "," + type);
             }

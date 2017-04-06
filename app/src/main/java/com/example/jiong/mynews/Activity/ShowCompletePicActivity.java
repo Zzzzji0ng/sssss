@@ -9,9 +9,6 @@ import com.example.jiong.mynews.R;
 import com.example.jiong.mynews.Utils.MynewsApplication;
 
 public class ShowCompletePicActivity extends Activity {
-    /*private ImageButton downloadButton;
-    private TextView titleText;
-    private ImageView completeImage;*/
     private PhotoView img;
 
     @Override

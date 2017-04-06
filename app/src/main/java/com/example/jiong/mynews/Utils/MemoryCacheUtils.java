@@ -11,7 +11,7 @@ public class MemoryCacheUtils {
     /*缓存图片的集合*/
     private LruCache<String,Bitmap> lruCache;
     public MemoryCacheUtils() {
-        int maxSize= (int) (Runtime.getRuntime().maxMemory()/1024/8); /*获得最大内存的1/100 用来缓存图片*/
+        int maxSize= (int) (Runtime.getRuntime().maxMemory()/1024/8); /*获得最大内存的1/8 用来缓存图片*/
         lruCache=new LruCache<String,Bitmap>(maxSize){
             @Override
             protected int sizeOf(String key, Bitmap value) {

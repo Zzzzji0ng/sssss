@@ -62,7 +62,7 @@ public class RefreshListView extends ListView {
         initHeaderrView(context);
         initFootView(context);
         iniAnimation();/*下拉刷新的动画*/
-        this.context=context;
+        this.context = context;
     }
 
     private void initHeaderrView(Context context) {
@@ -75,6 +75,7 @@ public class RefreshListView extends ListView {
 
         /*通过调用测量方法  得到高度  传入的值不会被作为数值*/
         ll_Pull_down.measure(0, 0);  /*要用下拉刷新控件来测量 不是用这个控件来测量*/
+        /*先用  mesasure(0,0)来测量，在调用getMeasuredHeight()获得下拉控件的高度*/
         headerViewHeight = ll_Pull_down.getMeasuredHeight();
         /*下拉刷新控件隐藏和显示的原理
         View.setPadding(0,-控件高，0,0）；//完全隐藏
@@ -252,6 +253,7 @@ public class RefreshListView extends ListView {
         }
     }
 
+    /*下拉控件的初始化  并将它隐藏  在TabDatialPager 的联网请求成功中调用*/
     public void onRreshFinish(Boolean success) {
         if (isLoadMore) {
             footview.setPadding(0, -FooterViewHeightfoot, 0, 0);

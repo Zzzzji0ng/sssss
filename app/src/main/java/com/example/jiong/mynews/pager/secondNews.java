@@ -17,7 +17,7 @@ import com.example.jiong.mynews.base.BasePager;
 /**
  * Created by Jiong on 2017/2/12.
  */
-public class secondNews extends BasePager{
+public class secondNews extends BasePager {
     private GridView gridView;
     private int[] pictureArray = {R.drawable.button_1, R.drawable.button_2, R.drawable.button_3, R.drawable.button_4, R.drawable.button_5,
             R.drawable.button_6, R.drawable.button_7, R.drawable.button_8, R.drawable.button_9, R.drawable.button_10};
@@ -63,13 +63,13 @@ public class secondNews extends BasePager{
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder;
-            if (convertView==null){
-                convertView=View.inflate(mContext,R.layout.convertvier_picture,null);
-                viewHolder=new ViewHolder();
-                viewHolder.imageView= (ImageView) convertView.findViewById(R.id.picture_select_item);
+            if (convertView == null) {
+                convertView = View.inflate(mContext, R.layout.convertvier_picture, null);
+                viewHolder = new ViewHolder();
+                viewHolder.imageView = (ImageView) convertView.findViewById(R.id.picture_select_item);
                 convertView.setTag(viewHolder);
-            }else {
-                viewHolder=(ViewHolder)convertView.getTag();
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
             }
             viewHolder.imageView.setImageResource(pictureArray[position]);
 
@@ -78,7 +78,7 @@ public class secondNews extends BasePager{
     }
 
 
-    static class ViewHolder{
+    static class ViewHolder {
         private ImageView imageView;
     }
 
@@ -86,7 +86,7 @@ public class secondNews extends BasePager{
     private class MyOnClickListener implements android.widget.AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent=new Intent(mContext,PictureDetailActivity.class);
+            Intent intent = new Intent(mContext, PictureDetailActivity.class);
             intent.putExtra("TYPE", Constants.PictureCategory[position]);
             mContext.startActivity(intent);
         }

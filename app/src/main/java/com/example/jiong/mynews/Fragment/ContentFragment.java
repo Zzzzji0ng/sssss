@@ -51,6 +51,11 @@ public class ContentFragment extends BaseFragment {
         x.view().inject(this, view);/*导入第三方包  先写出这一行 再实例化viewpager*/
         tv_titletext = (TextView) view.findViewById(R.id.tv_titletext);
         im_menu = (ImageButton) view.findViewById(R.id.im_menu);
+        getNetState();
+        return view;
+    }
+
+    private void getNetState() {
         netstate = PhoneNetStates.isNetworkConnected(mContext);
         if (netstate){
             int netype =PhoneNetStates.GetNetype(mContext);
@@ -61,7 +66,6 @@ public class ContentFragment extends BaseFragment {
         }else {
             Toast.makeText(mContext,"请检查网络开关",Toast.LENGTH_SHORT).show();
         }
-        return view;
     }
 
     @Override/*添加数据*/

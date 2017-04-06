@@ -30,10 +30,6 @@ public class MainActivity extends SlidingFragmentActivity {
         super.onCreate(savedInstanceState);
         initSlidingMenu();/*  选定代码 Ctrl alt M 快速提取方法*/
         iniFragment();/*更换碎片*/
-        /*if (CacheUtils.getBoolean(this,"Push_State")){
-            Intent intent =new Intent(MainActivity.this, NewsPushService.class);
-            startService(intent);
-        }*//*如果已经开启了推送  则开启这个进程*/
     }
 
     private void iniFragment() {
@@ -42,7 +38,6 @@ public class MainActivity extends SlidingFragmentActivity {
         ft.replace(R.id.leftmenuFragment, new LeftFragment(), LEFTMENU_TAG);
         ft.replace(R.id.ContentLayout, new ContentFragment(), CONTENTNEMU_TAG);
         ft.commit();
-
     }
 
 
@@ -76,7 +71,7 @@ public class MainActivity extends SlidingFragmentActivity {
                         e.printStackTrace();
                     }
                     backFlag=false;
-                };
+                }
             }.start();
         }
     }

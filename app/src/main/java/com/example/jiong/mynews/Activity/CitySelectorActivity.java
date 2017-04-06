@@ -1,7 +1,6 @@
 package com.example.jiong.mynews.Activity;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -43,7 +42,6 @@ public class CitySelectorActivity extends Activity {
     private Province SelectedProvince;/*被选中的省份*/
     private City SelectedCity;
     private County SelectCounty;
-    private ProgressDialog progress;
     private String WeatherCodeurl;
 
     @Override
@@ -136,7 +134,7 @@ public class CitySelectorActivity extends Activity {
 
     private void QueryFromNet(String code, final String type) {
         String address;
-        if (!TextUtils.isEmpty(code)) {/*如果为空 说明当前是查询城市或者县城信息*/
+        if (!TextUtils.isEmpty(code)) {/*如果不为空 说明当前是查询城市或者县城信息*/
             address = "http://www.weather.com.cn/data/list3/city" + code + ".xml";
             Log.d("Tag", address);
         } else {

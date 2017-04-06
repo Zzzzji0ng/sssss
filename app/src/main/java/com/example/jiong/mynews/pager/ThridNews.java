@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Created by Jiong on 2017/2/12.
  */
-public class ThridNews extends BasePager implements View.OnClickListener{
+public class ThridNews extends BasePager implements View.OnClickListener {
     private LinearLayout viedo_gridview_layout; /*双排视图的父布局  默认显示*/
     private GridView video_gridView;
     private Button button_morevideo;
@@ -42,15 +42,16 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     private LinearLayout viedo_listview_layout; /*单排视图的父部分 默认隐藏*/
     private ListView video_listView;
     private String questURL; /*请求地址*/
-    private int page=1;/*页数计数器*/
-    private int page2=50;/*listview 从第50 页开始获得数据*/
-    public static final String TYPE1="GRIDLIST";
-    public static final String TYPE2="LISTVIEW";
+    private int page = 1;/*页数计数器*/
+    private int page2 = 50;/*listview 从第50 页开始获得数据*/
+    public static final String TYPE1 = "GRIDLIST";
+    public static final String TYPE2 = "LISTVIEW";
     /*private int height;*/
     /*private int width;*/
     private View Footview;
     private List<VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> contentlist;
     private List<VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean> morecontentlist;
+
     /*private VideoBitmapUtils videobitmapUtils;
     private Handler handler =new Handler(){
         @Override
@@ -101,13 +102,13 @@ public class ThridNews extends BasePager implements View.OnClickListener{
 
     @Override
     public View iniView() {
-        View view=View.inflate(mContext, R.layout.videopager,null);
-        viedo_gridview_layout= (LinearLayout) view.findViewById(R.id.viedo_gridview_layout);
-        video_gridView= (GridView) view.findViewById(R.id.video_gridView);
-        button_morevideo= (Button) view.findViewById(R.id.button_morevideo);
-        Button_Refresh_video= (Button) view.findViewById(R.id.Button_Refresh_video);
-        viedo_listview_layout= (LinearLayout) view.findViewById(R.id.viedo_listview_layout);
-        video_listView= (ListView) view.findViewById(R.id.video_listView);
+        View view = View.inflate(mContext, R.layout.videopager, null);
+        viedo_gridview_layout = (LinearLayout) view.findViewById(R.id.viedo_gridview_layout);
+        video_gridView = (GridView) view.findViewById(R.id.video_gridView);
+        button_morevideo = (Button) view.findViewById(R.id.button_morevideo);
+        Button_Refresh_video = (Button) view.findViewById(R.id.Button_Refresh_video);
+        viedo_listview_layout = (LinearLayout) view.findViewById(R.id.viedo_listview_layout);
+        video_listView = (ListView) view.findViewById(R.id.video_listView);
         return view;
     }
 
@@ -117,19 +118,18 @@ public class ThridNews extends BasePager implements View.OnClickListener{
         Date currentTime = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         String dateString = formatter.format(currentTime);
-        Log.d("TAG",dateString);
-        questURL= Constants.VideoDataUrlFirst+Constants.VideoDataUrlSecond+dateString+Constants.VideoDataUrlThird+Constants.VideoDataUrlForce;
-        Log.d("TAG",questURL);
-        getVideoDataFromNet(questURL,TYPE1);
+        Log.d("TAG", dateString);
+        questURL = Constants.VideoDataUrlFirst + Constants.VideoDataUrlSecond + dateString + Constants.VideoDataUrlThird + Constants.VideoDataUrlForce;
+        Log.d("TAG", questURL);
+        getVideoDataFromNet(questURL, TYPE1);
         video_gridView.setOnItemClickListener(new MyVideoGridviewListener());
         button_morevideo.setOnClickListener(this);
         Button_Refresh_video.setOnClickListener(this);
     }
 
 
-
-    private void getVideoDataFromNet(String questURL,final String type) {
-        RequestParams patams =new RequestParams(questURL);
+    private void getVideoDataFromNet(String questURL, final String type) {
+        RequestParams patams = new RequestParams(questURL);
         patams.setConnectTimeout(5000);
         x.http().get(patams, new Callback.CommonCallback<String>() {
             @Override
@@ -139,13 +139,13 @@ public class ThridNews extends BasePager implements View.OnClickListener{
 
             @Override
             public void onSuccess(String result) {
-                if (type==TYPE1){
-                    if (result.contains("\"showapi_res_code\":-1005")){
-                        Toast.makeText(mContext,"请检查是否为北京时间",Toast.LENGTH_SHORT).show();
+                if (type == TYPE1) {
+                    if (result.contains("\"showapi_res_code\":-1005")) {
+                        Toast.makeText(mContext, "请检查是否为北京时间", Toast.LENGTH_SHORT).show();
                         onFinished();
                     }
                     processData(result);
-                }else if (type==TYPE2){
+                } else if (type == TYPE2) {
                     processDatalist(result);
                 }
             }
@@ -163,15 +163,16 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     }
 
     private void processData(String result) {
-        VideoContentPagerBean bean=parsedJson(result);
-        contentlist=bean.getShowapi_res_body().getPagebean().getContentlist();
+        VideoContentPagerBean bean = parsedJson(result);
+        contentlist = bean.getShowapi_res_body().getPagebean().getContentlist();
         video_gridView.setAdapter(new MyGirdviewAdapter());
     }
-    private void processDatalist(String result){
-        VideoContentPagerBean bean=parsedJson(result);
-        morecontentlist=bean.getShowapi_res_body().getPagebean().getContentlist();
-        Footview =View.inflate(mContext,R.layout.button_refresh_video,null);
-        Button bigmore= (Button) Footview.findViewById(R.id.Button_more_video_big);
+
+    private void processDatalist(String result) {
+        VideoContentPagerBean bean = parsedJson(result);
+        morecontentlist = bean.getShowapi_res_body().getPagebean().getContentlist();
+        Footview = View.inflate(mContext, R.layout.button_refresh_video, null);
+        Button bigmore = (Button) Footview.findViewById(R.id.Button_more_video_big);
         video_listView.addFooterView(Footview);
         video_listView.setAdapter(new MyListviewAdapter());
         video_listView.setOnItemClickListener(new MyVideoListviewListener());
@@ -179,10 +180,10 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     }
 
     private VideoContentPagerBean parsedJson(String result) {
-        return new Gson().fromJson(result,VideoContentPagerBean.class);
+        return new Gson().fromJson(result, VideoContentPagerBean.class);
     }
 
-    private class MyGirdviewAdapter extends BaseAdapter{
+    private class MyGirdviewAdapter extends BaseAdapter {
         @Override
         public int getCount() {
             return contentlist.size();
@@ -201,20 +202,20 @@ public class ThridNews extends BasePager implements View.OnClickListener{
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder;
-            if (convertView==null){
-                convertView=View.inflate(mContext,R.layout.videogridviewresource,null);
-                viewHolder=new ViewHolder();
-                viewHolder.videoImage= (ImageView) convertView.findViewById(R.id.videoImage);
-                viewHolder.headImage= (ImageView) convertView.findViewById(R.id.headImage);
-                viewHolder.videoTitle= (TextView) convertView.findViewById(R.id.videoTitle);
-                viewHolder.videoAuthor= (TextView) convertView.findViewById(R.id.videoAuthor);
-                viewHolder.love= (TextView) convertView.findViewById(R.id.love);
+            if (convertView == null) {
+                convertView = View.inflate(mContext, R.layout.videogridviewresource, null);
+                viewHolder = new ViewHolder();
+                viewHolder.videoImage = (ImageView) convertView.findViewById(R.id.videoImage);
+                viewHolder.headImage = (ImageView) convertView.findViewById(R.id.headImage);
+                viewHolder.videoTitle = (TextView) convertView.findViewById(R.id.videoTitle);
+                viewHolder.videoAuthor = (TextView) convertView.findViewById(R.id.videoAuthor);
+                viewHolder.love = (TextView) convertView.findViewById(R.id.love);
                 convertView.setTag(viewHolder);
-            }else {
-                viewHolder= (ViewHolder) convertView.getTag();
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
             }
             /*根据位置获得相应的数据*/
-            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean contentbean=contentlist.get(position);
+            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean contentbean = contentlist.get(position);
             Glide
                     .with(mContext)
                     .load(contentbean.getProfile_image())
@@ -231,15 +232,16 @@ public class ThridNews extends BasePager implements View.OnClickListener{
                 viewHolder.videoImage.setImageBitmap(bitmap);
             }*/
 
-            viewHolder.love.setText(contentbean.getLove()+"赞");
-            String text=contentbean.getText().replace(" ","");
+            viewHolder.love.setText(contentbean.getLove() + "赞");
+            String text = contentbean.getText().replace(" ", "");
             viewHolder.videoTitle.setText(text);
             viewHolder.videoAuthor.setText(contentbean.getName());
 
             return convertView;
         }
     }
-    static class ViewHolder{
+
+    static class ViewHolder {
         private ImageView videoImage;
         private TextView videoTitle;
         private TextView videoAuthor;
@@ -251,22 +253,23 @@ public class ThridNews extends BasePager implements View.OnClickListener{
     private class MyVideoGridviewListener implements android.widget.AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            String text=contentlist.get(position).getVideo_uri();
-            String title=contentlist.get(position).getText();
-            Intent intent=new Intent(mContext, VideoPlayActivity.class);
-            intent.putExtra("video_url",text);
-            intent.putExtra("video_title",title);
+            String text = contentlist.get(position).getVideo_uri();
+            String title = contentlist.get(position).getText();
+            Intent intent = new Intent(mContext, VideoPlayActivity.class);
+            intent.putExtra("video_url", text);
+            intent.putExtra("video_title", title);
             mContext.startActivity(intent);
         }
     }
+
     private class MyVideoListviewListener implements android.widget.AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            String text=morecontentlist.get(position).getVideo_uri();
-            String title=morecontentlist.get(position).getText();
-            Intent intent=new Intent(mContext, VideoPlayActivity.class);
-            intent.putExtra("video_url",text);
-            intent.putExtra("video_title",title);
+            String text = morecontentlist.get(position).getVideo_uri();
+            String title = morecontentlist.get(position).getText();
+            Intent intent = new Intent(mContext, VideoPlayActivity.class);
+            intent.putExtra("video_url", text);
+            intent.putExtra("video_title", title);
             mContext.startActivity(intent);
         }
     }
@@ -276,30 +279,30 @@ public class ThridNews extends BasePager implements View.OnClickListener{
         Date currentTime = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         String dateString = formatter.format(currentTime);
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.button_morevideo:
                 viedo_gridview_layout.setVisibility(View.GONE);
                 button_morevideo.setVisibility(View.GONE);
                 Button_Refresh_video.setVisibility(View.GONE);
                 viedo_listview_layout.setVisibility(View.VISIBLE);
                 video_listView.setVisibility(View.VISIBLE);
-                int j=page2;
-                questURL= Constants.VideoDataUrlFirst+j+Constants.VideoDataUrlSecond+dateString+Constants.VideoDataUrlThird+Constants.VideoDataUrlForce;
-                getVideoDataFromNet(questURL,TYPE2);
+                int j = page2;
+                questURL = Constants.VideoDataUrlFirst + j + Constants.VideoDataUrlSecond + dateString + Constants.VideoDataUrlThird + Constants.VideoDataUrlForce;
+                getVideoDataFromNet(questURL, TYPE2);
                 page2++;
                 /*listview显示数据*/
                 break;
             case R.id.Button_Refresh_video:
-                int i=page+1;
-                questURL= Constants.VideoDataUrlFirst+i+Constants.VideoDataUrlSecond+dateString+Constants.VideoDataUrlThird+Constants.VideoDataUrlForce;
-                getVideoDataFromNet(questURL,TYPE1);
+                int i = page + 1;
+                questURL = Constants.VideoDataUrlFirst + i + Constants.VideoDataUrlSecond + dateString + Constants.VideoDataUrlThird + Constants.VideoDataUrlForce;
+                getVideoDataFromNet(questURL, TYPE1);
                 /*video_gridView.setAdapter(new MyGirdviewAdapter());*/
                 page++;
                 break;
             case R.id.Button_more_video_big:
-                int k=page2;
-                questURL= Constants.VideoDataUrlFirst+k+Constants.VideoDataUrlSecond+dateString+Constants.VideoDataUrlThird+Constants.VideoDataUrlForce;
-                getVideoDataFromNet(questURL,TYPE2);
+                int k = page2;
+                questURL = Constants.VideoDataUrlFirst + k + Constants.VideoDataUrlSecond + dateString + Constants.VideoDataUrlThird + Constants.VideoDataUrlForce;
+                getVideoDataFromNet(questURL, TYPE2);
                 page2++;
                 video_listView.removeFooterView(Footview);
                 break;
@@ -327,20 +330,20 @@ public class ThridNews extends BasePager implements View.OnClickListener{
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             listviewViewHolder listviewViewHolder;
-            if (convertView==null){
-                listviewViewHolder=new listviewViewHolder();
-                convertView=View.inflate(mContext,R.layout.videolistviewresource,null);
-                listviewViewHolder.list_videoImage=(ImageView) convertView.findViewById(R.id.list_videoImage);
-                listviewViewHolder.headImage= (ImageView) convertView.findViewById(R.id.headImage);
-                listviewViewHolder.list_videoAuthor= (TextView) convertView.findViewById(R.id.list_videoAuthor);
-                listviewViewHolder.list_videoTime= (TextView) convertView.findViewById(R.id.list_videoTime);
-                listviewViewHolder.list_videoTitle= (TextView) convertView.findViewById(R.id.list_videoTitle);
+            if (convertView == null) {
+                listviewViewHolder = new listviewViewHolder();
+                convertView = View.inflate(mContext, R.layout.videolistviewresource, null);
+                listviewViewHolder.list_videoImage = (ImageView) convertView.findViewById(R.id.list_videoImage);
+                listviewViewHolder.headImage = (ImageView) convertView.findViewById(R.id.headImage);
+                listviewViewHolder.list_videoAuthor = (TextView) convertView.findViewById(R.id.list_videoAuthor);
+                listviewViewHolder.list_videoTime = (TextView) convertView.findViewById(R.id.list_videoTime);
+                listviewViewHolder.list_videoTitle = (TextView) convertView.findViewById(R.id.list_videoTitle);
                 convertView.setTag(listviewViewHolder);
-            }else {
-                listviewViewHolder= (ThridNews.listviewViewHolder) convertView.getTag();
+            } else {
+                listviewViewHolder = (ThridNews.listviewViewHolder) convertView.getTag();
             }
-            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean morecontentbean=morecontentlist.get(position);
-            Log.d("TAG",morecontentbean.toString());
+            VideoContentPagerBean.ShowapiResBodyBean.PagebeanBean.ContentlistBean morecontentbean = morecontentlist.get(position);
+            Log.d("TAG", morecontentbean.toString());
             Glide
                     .with(mContext)
                     .load(morecontentbean.getProfile_image())
@@ -361,14 +364,15 @@ public class ThridNews extends BasePager implements View.OnClickListener{
             }*/
 
             /*缩略图部分   使用自定义的三级缓存*/
-            String text=morecontentbean.getText().replace(" ","");
+            String text = morecontentbean.getText().replace(" ", "");
             listviewViewHolder.list_videoTitle.setText(text);
             listviewViewHolder.list_videoTime.setText(morecontentbean.getCreate_time());
             listviewViewHolder.list_videoAuthor.setText(morecontentbean.getName());
             return convertView;
         }
     }
-    static class listviewViewHolder{
+
+    static class listviewViewHolder {
         private ImageView list_videoImage;
         private ImageView headImage;
         private TextView list_videoAuthor;

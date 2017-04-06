@@ -17,6 +17,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
+ *
+ * 请求天气信息的工具类
  * Created by Jiong on 2017/3/2.
  */
 public class HttpUtil {

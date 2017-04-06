@@ -59,13 +59,12 @@ public class TabDetailPager extends NewsDetailBasePager {
     private Boolean isDragging = false;/*是否拖拽*/
     private int PreSelectPosition;/*之前红点所在的位置*/
     private int LargeSize = 0;  /*用来记录加载的新闻的数量*/
-    private int cishu=0;
+    private int cishu = 0;
 
 
     public TabDetailPager(Context context, String text) {
         super(context);
         this.text = text;
-
     }
 
     @Override
@@ -78,7 +77,7 @@ public class TabDetailPager extends NewsDetailBasePager {
         pic_viewPager = (HorizontalScrollViewpager) topView.findViewById(R.id.pic_viewpager);
         layout = (LinearLayout) topView.findViewById(R.id.LinearLayout_Viewpager);
         title_text = (TextView) topView.findViewById(R.id.Title_text);
-        listView.addTopView(topView); /*在 refreshKistView 中将轮播图动态加入到视图*/
+        listView.addTopView(topView); /*在 refreshlistView 中将轮播图动态加入到视图*/
         /*这些布局是在View中的  所以不能在上面用@ViewInject(R.id.pic_viewpager) 这种方式实例化  */
         return view;
     }  /*加载布局*/
@@ -240,6 +239,11 @@ public class TabDetailPager extends NewsDetailBasePager {
         listadapter = new MyNewsListAdapter();
         listView.setAdapter(listadapter);
         addRedPoint();
+        if (hander == null) {
+            hander = new MyViewPagerHander();
+        }
+        hander.removeCallbacksAndMessages(null);/*移除所有的消息和回调*/
+        hander.postDelayed(new MyRunnable(), 3000);
 
     }  /*解析从网络获取的部分数据*/
 
@@ -491,12 +495,12 @@ public class TabDetailPager extends NewsDetailBasePager {
             }
             Intent intent = new Intent(mContext, NewsDetailActivity.class);
             String url = bean.getUrl();
-            String title= bean.getTitle();
-            NewsInfomation infomation=new NewsInfomation();
+            String title = bean.getTitle();
+            NewsInfomation infomation = new NewsInfomation();
             infomation.setFrom("TabDetailPager");
             infomation.setUrl(url);
             infomation.setTitle(title);
-            intent.putExtra("newsInfomation",infomation);
+            intent.putExtra("newsInfomation", infomation);
             mContext.startActivity(intent);
         }
     } /*新闻列表点击事件监听器*/
@@ -506,7 +510,6 @@ public class TabDetailPager extends NewsDetailBasePager {
         TextView Item_Title_text;
         TextView Item_Time_text;
     } /*RefreshListView 的子项缓存类*/
-
 
 
 }

@@ -40,8 +40,8 @@ public class NewsMain extends BasePager {
 
     @Override
     public View iniView() {
-        View view=View.inflate(mContext,R.layout.news_detail_pager,null);
-        x.view().inject(this,view);
+        View view = View.inflate(mContext, R.layout.news_detail_pager, null);
+        x.view().inject(this, view);
         /*将view 实例化*/
         return view;
     }
@@ -50,9 +50,9 @@ public class NewsMain extends BasePager {
     public void iniData() {
         super.iniData();
         /*初始化10个Tab页面 */
-        list=new ArrayList<>();
-        for (int i=0;i< Constants.NewsCategory.length;i++){
-            TabDetailPager tabDetailPager=new TabDetailPager(mContext,Constants.NewsCategory[i]);
+        list = new ArrayList<>();
+        for (int i = 0; i < Constants.NewsCategory.length; i++) {
+            TabDetailPager tabDetailPager = new TabDetailPager(mContext, Constants.NewsCategory[i]);
             list.add(tabDetailPager);
         }
         news_Tab_viewpager.setAdapter(new MyPagerAdapter());
@@ -64,7 +64,8 @@ public class NewsMain extends BasePager {
         /*设置页面改变监听*/
 
     }
-    class MyOnPageChangeListener implements ViewPager.OnPageChangeListener{
+
+    class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -73,9 +74,9 @@ public class NewsMain extends BasePager {
         @Override
         public void onPageSelected(int position) {
             /*只有在第一个页签的位置可以拉出左划菜单  提升体验*/
-            if (position==0){
+            if (position == 0) {
                 isEnableSlidingmenu(true);
-            }else {
+            } else {
                 isEnableSlidingmenu(false);
             }
         }
@@ -85,11 +86,12 @@ public class NewsMain extends BasePager {
 
         }
     }
+
     private void isEnableSlidingmenu(Boolean isEnableSlidingmenu) {
         /*Ctrl alt t 快速将选定的代码加上if else*/
         MainActivity mainActivity = (MainActivity) mContext;
         /*mActivity 实际上就是mainActivity 通过强壮得到他  才能得到侧滑菜单的实例*/
-        SlidingMenu slidingMenu=mainActivity.getSlidingMenu();
+        SlidingMenu slidingMenu = mainActivity.getSlidingMenu();
         if (isEnableSlidingmenu) {
            /*可以从左侧滑动调出菜单*/
             slidingMenu.setTouchModeAbove(SlidingMenu.LEFT);
@@ -98,11 +100,12 @@ public class NewsMain extends BasePager {
             slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
         }
     }
-    class MyPagerAdapter extends PagerAdapter{
+
+    class MyPagerAdapter extends PagerAdapter {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return  Constants.NewsCategory[position];
+            return Constants.NewsCategory[position];
         }
         /*这个方法用于返回Tab的标题*/
 
@@ -113,14 +116,14 @@ public class NewsMain extends BasePager {
 
         @Override
         public boolean isViewFromObject(View view, Object object) {
-            return view==object;
+            return view == object;
         }
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             /*return super.instantiateItem(container, position);*/
-            TabDetailPager tabDetailPager=list.get(position);
-            View rootview=tabDetailPager.rootView;
+            TabDetailPager tabDetailPager = list.get(position);
+            View rootview = tabDetailPager.rootView;
             container.addView(rootview);
             tabDetailPager.initData();
             /*一定要调用这个方法 不然没有初始化  无法显示数据  在这里调用方法能够在滑到相应的页签
